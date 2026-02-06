@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="../music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Hearts -->
+  <div class="hearts-container"></div>
+  <div class="container" id="mainContainer">
+    <h1>Happy Valentine's Day ❤️ afsha </h1>
+    <h2>My Love</h2>
+
+    <div class="card">
+      <p>
+        From the moment you came into my life, everything felt brighter.
+        Your smile, your kindness, your love — they mean more to me than
+        I can ever explain.
+      </p>
+
+      <p>
+        Thank you for being my safe place, my happiness, and my favorite person.
+        I choose you today, tomorrow, and always.
+      </p>
+
+      <p class="signature">
+        With all my love,<br>
+        Yours ❤️
+      </p>
+    </div>
+
+    <button onclick="showLove()">Click for a Surprise 💌</button>
+
+    <div id="hiddenMessage" class="hidden">
+      <p>Will you be my Valentine? 💖🌹</p>
+      <div class="button-group">
+        <button onclick="unlockSecret(true)" class="yes-btn">Yes ❤️</button>
+        <button onmouseover="escapeNo(this)" class="no-btn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secret Message Screen -->
+  <div id="secretScreen" class="secret-screen hidden">
+    <div class="secret-content">
+      <h2>I knew it! 💕</h2>
+      <p id="secretMessage"></p>
+      <button onclick="showGallery()">See our memories 📸</button>
+    </div>
+  </div>
+
+  <!-- Photo Gallery Screen -->
+  <div id="galleryScreen" class="gallery-screen hidden">
+    <div class="gallery-content">
+      <h2>Our Beautiful Moments 👫</h2>
+      <button onclick="randomCompliment()" class="compliment-btn">Compliment me 😌</button>
+      <p id="complimentText" class="compliment-text"></p>
+      <div class="gallery">
+        <div class="photo-placeholder">📸 Photo 1</div>
+        <div class="photo-placeholder">📸 Photo 2</div>
+        <div class="photo-placeholder">📸 Photo 3</div>
+        <div class="photo-placeholder">📸 Photo 4</div>
+      </div>
+      <button onclick="showForever()">Forever with you 💍</button>
+    </div>
+  </div>
+
+  <!-- Forever Screen -->
+  <div id="foreverScreen" class="forever-screen hidden">
+    <div class="forever-content">
+      <h1>Forever ❤️</h1>
+      <p>Afsha, I choose you today, tomorrow, and every day after.</p>
+      <p class="forever-text">You're stuck with me now 😌❤️<br>No refunds. No returns. Only love.</p>
+      <button onclick="location.reload()">Start Over</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
