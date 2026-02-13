@@ -8,14 +8,24 @@
 </head>
 <body>
   <!-- Background Music -->
-  <audio id="bgMusic" autoplay loop>
-    <source src="../music.mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
+
+  <!-- Start overlay to enable user gesture for audio/autoplay -->
+  <div id="startOverlay" class="start-overlay">
+    <div class="start-box">
+      <h2>Welcome ❤️</h2>
+      <p>Tap to start the surprise and music</p>
+      <button id="startBtn" type="button">Start</button>
+    </div>
+  </div>
 
   <!-- Floating Hearts -->
   <div class="hearts-container"></div>
   <div class="container" id="mainContainer">
-    <h1>Happy Valentine's Day ❤️ afsha </h1>
+    <h1 data-text="Happy Valentine's Day ❤️ afsha">Happy Valentine's Day ❤️ afsha</h1>
     <h2>My Love</h2>
 
     <div class="card">
@@ -36,13 +46,13 @@
       </p>
     </div>
 
-    <button onclick="showLove()">Click for a Surprise 💌</button>
+    <button type="button" onclick="showLove()">Click for a Surprise 💌</button>
 
     <div id="hiddenMessage" class="hidden">
       <p>Will you be my Valentine? 💖🌹</p>
       <div class="button-group">
-        <button onclick="unlockSecret(true)" class="yes-btn">Yes ❤️</button>
-        <button onmouseover="escapeNo(this)" class="no-btn">No</button>
+        <button type="button" onclick="unlockSecret(true)" class="yes-btn">Yes ❤️</button>
+        <button type="button" onmouseover="escapeNo(this)" class="no-btn">No</button>
       </div>
     </div>
   </div>
@@ -60,7 +70,7 @@
   <div id="galleryScreen" class="gallery-screen hidden">
     <div class="gallery-content">
       <h2>Our Beautiful Moments 👫</h2>
-      <button onclick="randomCompliment()" class="compliment-btn">Compliment me 😌</button>
+      <button type="button" onclick="randomCompliment()" class="compliment-btn">Compliment me 😌</button>
       <p id="complimentText" class="compliment-text"></p>
       <div class="gallery">
         <img src="../afsha1.png" alt="Our Beautiful Moment 1" class="gallery-photo">
@@ -68,7 +78,7 @@
         <img src="../afsha3.png" alt="Our Beautiful Moment 3" class="gallery-photo">
         <img src="../afsha4.png" alt="Our Beautiful Moment 4" class="gallery-photo">
        </div>
-      <button onclick="showForever()">Forever with you 💍</button>
+      <button type="button" onclick="showForever()">Forever with you 💍</button>
     </div>
   </div>
 
@@ -78,7 +88,7 @@
       <h1>Forever ❤️</h1>
       <p>Afsha, I choose you today, tomorrow, and every day after.</p>
       <p class="forever-text">You're stuck with me now 😌❤️<br>No refunds. No returns. Only love.</p>
-      <button onclick="location.reload()">Start Over</button>
+      <button type="button" onclick="location.reload()">Start Over</button>
     </div>
   </div>
 
